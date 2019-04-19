@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传人物详细信息</title>
+</head>
+<body>
+<form action="/upcreate" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label>姓名：</label>
+    <input type="text" name="hname"><br/>
+    <label>性别：</label>
+    <input type="radio" name="hgender" value="0">男
+    <input type="radio" name="hgender" value="1">女<br/>
+    <label>人物图片</label>
+    <input type="file" name="pichero"><br/>
+    <label>简介</label>
+    <textarea name="hcomment"></textarea><br/>
+    <label>所属的书籍：</label>
+    <input type="text" name="hbook"><br/>
+    <input type="submit" value="提交">
+    <input type="reset" value="撤回">
+
+</form>
+</body>
+</html>

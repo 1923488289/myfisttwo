@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>查看信息</title>
+    <title>人物信息</title>
 </head>
 <body>
+<h1>人物信息</h1>
 <ul>
-    {% for mess in b %}
-        <li><a href="/heromess{{ mess.id }}">{{ mess.btitle }}</a></li>
+    {% for hero in heros %}
+        <li>{{ hero.hname }}</li>
     {% empty %}
         <div>没有数据</div>
     {% endfor %}
