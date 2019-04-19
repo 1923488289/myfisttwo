@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传信息</title>
+</head>
+<body>
+<form action="/ccpic" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label>书名：</label>
+    <input type="text" name="sm"><br/>
+    <br>
+    <label>封面</label>
+    <input type="file" name="pic"><br>
+    <br>
+    <label>出版时间：</label>
+    <input type="text" name="sj"><br/>
+    <br>
+    <label>阅读量</label>
+    <input type="text" name="bread"><br>
+    <br>
+    <label>评论量</label>
+    <input type="text" name="bcomment"><br>
+    <br>
+    <input type="submit" value="确认提交">
+    <input type="reset" value="撤回">
+
+</form>
+</body>
+</html>

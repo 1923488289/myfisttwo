@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查看信息</title>
+</head>
+<body>
+<ul>
+    {% for mess in b %}
+        <li>{{ mess.btitle }}</li>
+    {% empty %}
+        <div>没有数据</div>
+    {% endfor %}
+</ul>
+</body>
+</html>
