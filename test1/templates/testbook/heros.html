@@ -1,17 +1,25 @@
+{% load myider %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>人物信息</title>
+    <style>
+        #div1{
+            font-size: 30px;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
 </head>
 <body>
 <h1>人物信息</h1>
-<ul>
-    {% for hero in heros %}
-        <li>{{ hero.hname }}</li>
-    {% empty %}
-        <div>没有数据</div>
-    {% endfor %}
-</ul>
+{#{{ hero.hgender }}#}
+<div id="div1">{{ hero.hname }}</div>
+<span>{{ hero.hgender|myder}}</span>
+<div>{{ hero.hcomment }}</div>
+<div ><img src="/static/media/{{ hero.himg }}" id="div2"></div>
 </body>
 </html>

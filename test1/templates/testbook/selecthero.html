@@ -7,7 +7,7 @@
 <body>
 <ul>
     {% for i in heros %}
-    <li><a href="/heromessage{i.id}">{{ i.hname }}</a></li>
+    <li><a href="/heromessage{{ i.id }}">{{ i.hname }}</a></li>
     {% empty %}
         <div>没有数据</div>
     {% endfor %}
